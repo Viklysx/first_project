@@ -1,0 +1,142 @@
+@font-face {
+    src: url('../fonts/NunitoSans-Regular.ttf');
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('../fonts/YesevaOne-Regular.ttf');
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.button {
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    outline: 0;
+    border: 0;
+    padding: 13px 33px;
+    color: white;
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-calc {
+    width: 207px;
+    height: 51px;
+    text-transform: none;
+}
+
+.sub {
+    border: 1px solid #FFFFFF;
+    padding: 0px;
+    background: transparent;
+    margin-left: 18px;
+}
+
+.logo {
+    color:#E3B873;
+    text-transform: uppercase;   
+}
+
+.number {
+    color:#E3B873;
+    text-align: right;
+    text-decoration-line: underline;  
+}
+
+.header {
+    background-color: black;  
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    align-items: center;
+}
+
+.header-navigation {
+    list-style: none;
+    display: flex;
+}
+
+.header-navigation__item {   
+    margin-right: 47px;
+}
+
+.header-navigation__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-navigation__item a:hover {
+    color: #E3B873;
+}
+
+.hero {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    height: 707px;
+    padding-top: 194px;
+    position: relative;
+}
+
+.hero-owerlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    margin-left: 134px;
+}
+
+.title {
+    margin: 0;
+    font-family: 'Yeseva One', 'Times New Roman', Times, serif;
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.rostov-text {
+    color: #E3B873;
+}
+
+.text-container {
+    font-size: 22px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
