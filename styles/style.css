@@ -454,6 +454,7 @@ input[type=checkbox]:checked + label:before {
     /* transform: translate(10%,-20%); */
     padding-top: 10px;
     margin-left: 10%;
+    max-width: 1250px;
 }
 
 .item-text {
@@ -477,8 +478,9 @@ input[type=checkbox]:checked + label:before {
 
 .example {
     margin-top: 45px;
-    width: 90%;
+    width: 80%;
     justify-content: center;
+    max-width: 1250px;
 }
 
 .example-personal {
@@ -584,7 +586,8 @@ input[id="inp"]::placeholder { color: #fff; }
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 100px;
+    width: 340px;
+    margin-left: 58%;
 }
 
 .measurements-additionally {
@@ -635,6 +638,8 @@ input[id="inp"]::placeholder { color: #fff; }
 
 .container-2 {
     margin: 0 auto;
+    width: 80%;
+    max-width: 1250px;
     /*background: url(../images/frame.png);*/
 }
 
@@ -902,6 +907,7 @@ footer {
 
 .fform {
     margin-top: 60px;
+    width: 100%;
 }
 
 .mob_reverse {
@@ -914,10 +920,28 @@ footer {
     margin-left: -43px;
 }
 
-.example-items {
+.example-items, .fform, .controls-main__inp {
     width: 100%;
 }
+
+/*.controls-main__inp {
+    width: 100%;
+}*/
+
+.m_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
+
+.m-block-2 {
+    box-sizing: border-box;
+}
+
+
+}
+
 
 
 
