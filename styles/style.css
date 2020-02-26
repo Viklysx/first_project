@@ -33,6 +33,10 @@ h1, h2 {
     font-weight: normal;
 }
 
+a {
+    cursor: pointer;
+}
+
 .example-item__div {
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -47,6 +51,10 @@ h1, h2 {
 
 .img-2 {
     display: none;
+}
+
+.img-2__center {
+    width: 100%
 }
 
 .container {
@@ -206,10 +214,14 @@ h1, h2 {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.projects-navigation__item a:hover {
+.projects-navigation__item a:hover, .active_item a  {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
+
+/*.active_item a {
+    color: #E3B873;
+}*/
 
 .title-text {
     font-family: Yeseva One;
@@ -693,6 +705,28 @@ input[id="inp"]::placeholder { color: #fff; }
     margin-bottom: 25px;
 }
 
+.slider {
+    display: flex;
+}
+
+.slider-dots__item {
+    background: rgba(255, 255, 255, 0.3);
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0px 0px 0px 29px;
+    cursor: pointer;
+}
+
+.item_3 {
+    margin-right: 29px;
+}
+
+.slider-dots__item:hover, .active {
+    background: #FFFFFF;
+}
+
 
 @media (max-width: 1365px) {
 
@@ -932,20 +966,12 @@ footer {
 
 @media (max-width: 767px) {
 .projects__block-left {
-    margin-left: -43px;
+    /*margin-left: -43px;*/
 }
 
 .example-items, .fform, .controls-main__inp {
     width: 100%;
 }
-
-/*.projects-footer-icons {
-    flex-direction: row;
-}*/
-
-/*.controls-main__inp {
-    width: 100%;
-}*/
 
 .m_flex {
     display: flex;
@@ -958,8 +984,51 @@ footer {
     box-sizing: border-box;
 }
 
+.img-2__left {
+    position: absolute;
+    transform: translate(5px, 255%);
+}
+
+.img-2__right {
+    position: absolute;
+    transform: translate(-40px, 255%);
+}
+
+.img-2 {
+    margin-bottom: 25px;
+}
+
 
 }
+
+@media (min-width: 768px) {
+.img-2__left {
+    position: absolute;
+    transform: translate(5px, 550%);
+}
+
+.img-2__right {
+    position: absolute;
+    transform: translate(-40px, 550%);
+}
+
+.img-2 {
+    margin-bottom: 25px;
+}
+
+}
+
+@media (min-width: 1024px) {
+.img-2__left {
+    transform: translate(5px, 750%);
+}
+
+.img-2__right {
+    transform: translate(-40px, 750%);
+}
+
+}
+
 
 
 

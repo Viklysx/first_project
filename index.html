@@ -65,7 +65,7 @@
                                     <p class="projects-unit title-text">
                                         City:
                                     </p>
-                                    <p class="description text_block">
+                                    <p id="block_slider_city" class="description text_block">
                                         Rostov-on-Don<br> LCD admiral
                                     </p>
                                 </div>
@@ -73,7 +73,7 @@
                                     <p class="projects-unit title-text">
                                         Repair time:
                                     </p>
-                                    <p class="description text_block">
+                                    <p  id="block_slider_time" class="description text_block">
                                         3.5 months
                                     </p>
                                 </div>
@@ -83,7 +83,7 @@
                                     <p class="projects-unit title-text">
                                         apartment area:
                                     </p>
-                                    <p class="description text_block">
+                                    <p  id="block_slider_area" class="description text_block">
                                         81 m<sup>2</sup>
                                     </p>
                                 </div>
@@ -99,24 +99,36 @@
                         </div>
                     </div>
                     <div class="slider">
-                        <img src="images/group.svg">
+                        <div>
+                            <a onclick="minusSlide()"><img src="images/stroke1.png"></a>
+                        </div>
+                        <div>
+                            <span class="slider-dots__item active" onclick="slide('slide_1')"></span>
+                            <span class="slider-dots__item" onclick="slide('slide_2')"></span>
+                            <span class="slider-dots__item item_3" onclick="slide('slide_3')"></span>
+                        </div>
+                        <div>
+                            <a onclick="plusSlide()"><img src="images/stroke2.png"></a>
+                        </div>
                     </div>
                 </div>
                 <div class="projects__block-left">
                     <div>
                         <nav>
                             <ul class="header-navigation projects-ul">
-                                <li class="projects-navigation__item"><a href="#">Rostov-on-Don, Admiral</a></li>
-                                <li class="projects-navigation__item"><a href="#">Sochi Thieves</a></li>
-                                <li class="projects-navigation__item"><a href="#">Rostov-on-Don Patriotic</a></li>
+                                <li class="projects-navigation__item"><a id="slide_1" onclick="slide(this.id);" >Rostov-on-Don, Admiral</a></li>
+                                <li class="projects-navigation__item"><a id="slide_2" onclick="slide(this.id);">Sochi Thieves</a></li>
+                                <li class="projects-navigation__item"><a id="slide_3" onclick="slide(this.id);">Rostov-on-Don Patriotic</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="img-1">
-                        <img src="images/image2.jpg" alt="photo">
+                        <img id="sld_1" src="images/image2.jpg" alt="photo">
                     </div>
                     <div class="img-2">
-                        <img src="images/mgroup.png" alt="photo">
+                        <img onclick="minusSlideBlock()" class="img-2__left" src="images/ellipse.png">
+                        <img id="sld_2" class="img-2__center" src="images/slide_2.jpg" alt="photo">
+                        <img onclick="plusSlideBlock()" class="img-2__right" src="images/ellipse2.png">
                     </div>
                 </div>                              
             </div>
@@ -563,7 +575,7 @@
             <button class="button">Request a call</button>
         </div>
     </footer>
-
-</main>
+    </main>
+    <script src="js/slider.js"></script>
 </body>
 </html>
