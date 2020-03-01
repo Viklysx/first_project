@@ -2,6 +2,33 @@ var slides = document.getElementsByClassName("slider-dots__item");
 var slidesTitle = document.getElementsByClassName("projects-navigation__item");
 var index = 1; // индекс слайда по умолчанию
 var indexBlock = 1; // индекс слайда по умолчанию у второго блока с фото
+var sld_1 = document.getElementById('sld_1');
+var block_slider_city = document.getElementById('block_slider_city');
+var block_slider_time =  document.getElementById('block_slider_time');
+var block_slider_area = document.getElementById('block_slider_area');
+var sld_2 = document.getElementById('sld_2');
+
+
+const variants = [
+  {
+    city: 'Rostov-on-Don<br> LCD admiral',
+    time: '3.5 months',
+    area: '81 m<sup>2</sup>',
+    img: 'images/image2.jpg'
+  },
+  {
+    city: 'Sochi <br>Thieves',
+    time: '4 months',
+    area: '105 m<sup>2</sup>',
+    img: 'images/slide_2.jpg'
+  },
+  {
+    city: 'Rostov-on-Don <br>Patriotic',
+    time: '3 months',
+    area: '93 m<sup>2</sup>',
+    img: 'images/slide_3.jpg'
+  }
+]
 
 function plusSlide() {
 	index += 1;
@@ -35,45 +62,45 @@ function slide(id) {
          slidesTitle [i].className = slidesTitle [i].className.replace(" active_item", "");
 	}
 	if (id === 'slide_1'){
-		document.getElementById('sld_1').src = 'images/image2.jpg';
-		slides[0].className += " active";
-		slidesTitle[0].className += " active_item";
-		document.getElementById('block_slider_city').innerHTML =
-			'Rostov-on-Don<br> LCD admiral';
-		document.getElementById('block_slider_time').innerHTML =
-			'3.5 months';
-		document.getElementById('block_slider_area').innerHTML =
-			'81 m<sup>2</sup>';
+		sld_1.src = variants[indexBlock-1].img;
+		slides[indexBlock-1].className += " active";
+		slidesTitle[indexBlock-1].className += " active_item";
+		block_slider_city.innerHTML = variants[indexBlock-1].city;
+		block_slider_time.innerHTML = variants[indexBlock-1].time;
+		block_slider_area.innerHTML = variants[indexBlock-1].area;
 	}
 	if (id === 'slide_2'){
-		document.getElementById('sld_1').src = 'images/slide_2.jpg';
-		slides[1].className += " active";
-		slidesTitle[1].className += " active_item";
-		document.getElementById('block_slider_city').innerHTML =
-			'Sochi <br>Thieves';
-		document.getElementById('block_slider_time').innerHTML =
-			'4 months';
-		document.getElementById('block_slider_area').innerHTML =
-			'105 m<sup>2</sup>';
+		sld_1.src = variants[indexBlock].img;
+		slides[indexBlock].className += " active";
+		slidesTitle[indexBlock].className += " active_item";
+		block_slider_city.innerHTML = variants[indexBlock].city;
+		block_slider_time.innerHTML = variants[indexBlock].time;
+		block_slider_area.innerHTML = variants[indexBlock].area;
 	}
 	if (id === 'slide_3'){
-		document.getElementById('sld_1').src = 'images/slide_3.jpg';
-		slides[2].className += " active";
-		slidesTitle[2].className += " active_item";
-		document.getElementById('block_slider_city').innerHTML =
-			'Rostov-on-Don <br>Patriotic';
-		document.getElementById('block_slider_time').innerHTML =
-			'3 months';
-		document.getElementById('block_slider_area').innerHTML =
-			'93 m<sup>2</sup>';
+		sld_1.src = variants[indexBlock+1].img;
+		slides[indexBlock+1].className += " active";
+		slidesTitle[indexBlock+1].className += " active_item";
+		block_slider_city.innerHTML = variants[indexBlock+1].city;
+		block_slider_time.innerHTML = variants[indexBlock+1].time;
+		block_slider_area.innerHTML = variants[indexBlock+1].area;
+		// sld_1.src = 'images/slide_3.jpg';
+		// slides[2].className += " active";
+		// slidesTitle[2].className += " active_item";
+		// block_slider_city.innerHTML =
+		// 	'Rostov-on-Don <br>Patriotic';
+		// block_slider_time.innerHTML =
+		// 	'3 months';
+		// block_slider_area.innerHTML =
+		// 	'93 m<sup>2</sup>';
 	}
 	if (id === 'slide_block_1'){
-		document.getElementById('sld_2').src = 'images/slide_2.jpg';
+		sld_2.src = 'images/slide_2.jpg';
 	}
 	if (id === 'slide_block_2'){
-		document.getElementById('sld_2').src = 'images/slide_3.jpg';
+		sld_2.src = 'images/slide_3.jpg';
 	}
 	if (id === 'slide_block_3'){
-		document.getElementById('sld_2').src = 'images/image2.jpg';
+		sld_2.src = 'images/image2.jpg';
 	}
 }
