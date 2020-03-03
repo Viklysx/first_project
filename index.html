@@ -103,9 +103,9 @@
                             <a onclick="minusSlide()"><img src="images/stroke1.png"></a>
                         </div>
                         <div>
-                            <span class="slider-dots__item active" onclick="slide('slide_1')"></span>
-                            <span class="slider-dots__item" onclick="slide('slide_2')"></span>
-                            <span class="slider-dots__item item_3" onclick="slide('slide_3')"></span>
+                            <span class="slider-dots__item active" onclick="slide(1)"></span>
+                            <span class="slider-dots__item" onclick="slide(2)"></span>
+                            <span class="slider-dots__item item_3" onclick="slide(3)"></span>
                         </div>
                         <div>
                             <a onclick="plusSlide()"><img src="images/stroke2.png"></a>
@@ -116,14 +116,14 @@
                     <div>
                         <nav>
                             <ul class="header-navigation projects-ul">
-                                <li class="projects-navigation__item"><a id="slide_1" onclick="slide(this.id);" >Rostov-on-Don, Admiral</a></li>
+                                <li class="projects-navigation__item active_item"><a id="slide_1" onclick="slide(this.id);" >Rostov-on-Don, Admiral</a></li>
                                 <li class="projects-navigation__item"><a id="slide_2" onclick="slide(this.id);">Sochi Thieves</a></li>
                                 <li class="projects-navigation__item"><a id="slide_3" onclick="slide(this.id);">Rostov-on-Don Patriotic</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="img-1">
-                        <img id="sld_1" src="images/image2.jpg" alt="photo">
+                        <img id="sld_1" src="images/slide_1.jpg" alt="photo">
                     </div>
                     <div class="img-2">
                         <img onclick="minusSlideBlock()" class="img-2__left" src="images/ellipse.png">

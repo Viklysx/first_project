@@ -14,7 +14,7 @@ const variants = [
     city: 'Rostov-on-Don<br> LCD admiral',
     time: '3.5 months',
     area: '81 m<sup>2</sup>',
-    img: 'images/image2.jpg'
+    img: 'images/slide_1.jpg'
   },
   {
     city: 'Sochi <br>Thieves',
@@ -33,74 +33,41 @@ const variants = [
 function plusSlide() {
 	index += 1;
 	if (index === 4) index = 1;
-	slide('slide_'+index);
+	slide(index);
 }
 
 function minusSlide() {
 	index -= 1;
 	if (index === 0) index = 3;
-	slide('slide_'+index);
+	slide(index);
 }
 
 function plusSlideBlock() {
 	indexBlock  += 1;
 	if (indexBlock  === 4) indexBlock  = 1;
-	slide('slide_block_'+indexBlock);
+	slide(indexBlock);
 }
 
 function minusSlideBlock() {
 	indexBlock-= 1;
 	if (indexBlock === 0) indexBlock = 3;
-	slide('slide_block_'+indexBlock);
+	slide(indexBlock);
 }
 
-function slide(id) {
+function slide(index) {
 	for (i = 0; i < slides.length; i++) {
-         slides[i].className = slides[i].className.replace(" active", "");
+         slides[i].classList.remove('active');
 	}
 	for (i = 0; i < slidesTitle .length; i++) {
-         slidesTitle [i].className = slidesTitle [i].className.replace(" active_item", "");
+         slidesTitle[i].classList.remove('active_item');
 	}
-	if (id === 'slide_1'){
-		sld_1.src = variants[indexBlock-1].img;
-		slides[indexBlock-1].className += " active";
-		slidesTitle[indexBlock-1].className += " active_item";
-		block_slider_city.innerHTML = variants[indexBlock-1].city;
-		block_slider_time.innerHTML = variants[indexBlock-1].time;
-		block_slider_area.innerHTML = variants[indexBlock-1].area;
-	}
-	if (id === 'slide_2'){
-		sld_1.src = variants[indexBlock].img;
-		slides[indexBlock].className += " active";
-		slidesTitle[indexBlock].className += " active_item";
-		block_slider_city.innerHTML = variants[indexBlock].city;
-		block_slider_time.innerHTML = variants[indexBlock].time;
-		block_slider_area.innerHTML = variants[indexBlock].area;
-	}
-	if (id === 'slide_3'){
-		sld_1.src = variants[indexBlock+1].img;
-		slides[indexBlock+1].className += " active";
-		slidesTitle[indexBlock+1].className += " active_item";
-		block_slider_city.innerHTML = variants[indexBlock+1].city;
-		block_slider_time.innerHTML = variants[indexBlock+1].time;
-		block_slider_area.innerHTML = variants[indexBlock+1].area;
-		// sld_1.src = 'images/slide_3.jpg';
-		// slides[2].className += " active";
-		// slidesTitle[2].className += " active_item";
-		// block_slider_city.innerHTML =
-		// 	'Rostov-on-Don <br>Patriotic';
-		// block_slider_time.innerHTML =
-		// 	'3 months';
-		// block_slider_area.innerHTML =
-		// 	'93 m<sup>2</sup>';
-	}
-	if (id === 'slide_block_1'){
-		sld_2.src = 'images/slide_2.jpg';
-	}
-	if (id === 'slide_block_2'){
-		sld_2.src = 'images/slide_3.jpg';
-	}
-	if (id === 'slide_block_3'){
-		sld_2.src = 'images/image2.jpg';
-	}
+
+	sld_1.src = variants[index-1].img;
+	slides[index-1].classList.add('active')
+	slidesTitle[index-1].classList.add('active_item')
+	block_slider_city.innerHTML = variants[index-1].city;
+	block_slider_time.innerHTML = variants[index-1].time;
+	block_slider_area.innerHTML = variants[index-1].area;
+
+	sld_2.src = 'images/slide_'+index+'.jpg';
 }
