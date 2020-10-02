@@ -1,2 +1,2 @@
 # first_project
-Training project based on the layout.
+Учебный проект, выполненный по макету на курсе в Skillfactory.
